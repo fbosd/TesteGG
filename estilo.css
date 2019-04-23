@@ -1,0 +1,305 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face{
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+<style>
+
+body{
+    background-color: #ffffff;
+    color: rgba(0,0,0,1);
+} /*Corpo da página*/
+
+div#interface{
+    font-family: Arial, sans-serif;
+    position: relative;
+    width: 1275px;
+    left: 35px;
+    background-color: whitesmoke;
+    margin: -15px 10px -15px -20px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,.5);
+    padding: 15px;
+} /*Toda a interface da página*/
+
+header#cabecalho img#icone{
+    position: absolute;
+    opacity: 1;
+    display: block;
+    left: 1095px;
+    top: 93px;
+    transition: transform 1s;
+} /*imagem de oculos preto no canto*/
+
+header#cabecalho img#icone:hover{
+    opacity: 0.5;
+    transform: rotate(180deg);
+} /*efeito  ao passar o mouse no oculos*/ 
+
+header#cabecalho img#logo{
+    margin-top: -12px;
+    margin-left: 75px;
+    width: 150px;
+} /*Logotipo Glass*/
+
+header#cabecalho {
+    border-bottom: 3px gray solid; 
+    height: 150px;
+    padding: 2px;
+} /*todo o cabeçalho com o menu e titulo, oculos abaixo*/
+
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: darkgray;
+    text-shadow: 1px 2px 1px rgba(0,0,0,.9);
+    padding: 0px;
+    margin-bottom: 0px;
+}  /*Logotipo do google glass*/
+
+header#cabecalho h2{
+    font-family: 'Roboto', sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+} /*Texto abaixo do logotipo*/
+
+p{
+    text-align: justify;
+    text-indent: 40px;
+ } /*configuração padrão para parágrafos*/
+
+figure.foto-legenda{
+    width: 460px;
+    height: 324px;
+    position: relative;
+    border: 8px solid white;  
+    box-shadow: 1px 1px 4px black;
+} /**/
+
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+} /*imagem de homem e mulher*/
+
+figure.foto-legenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;  
+    background-color: rgba(0,0,0,.3);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+} /*campo onde legenda será mostrada*/
+
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+} /*recurso visual do mouse sobre a foto*/
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -9px;
+    left: 664px;
+   
+} /*menu acima do cabeçalho*/
+
+nav#menu li{
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 0.8s;
+} /*itens do menu*/
+
+nav#menu li:hover{
+    background-color: #606060;
+    text-shadow: 1px 1px rgba(173,216,230,.7);
+} /*efeito quando o mouse passar acima dos itens*/
+
+nav#menu{
+    display: block;
+} /*faz o menu ser um bloco podendo deslisar na página*/
+
+nav#menu h1{
+    display: none;
+} /*Esconde o titulo de menu*/
+
+nav#menu a{
+    color: black;
+    text-decoration: none;
+} /*links dos itens do menu*/ 
+
+nav#menu a:hover{
+    color: white;
+    text-decoration: underline;
+} /*efeito do mouse sobre o link dentro do item do menu*/ 
+
+table#specs{
+    border: .5px solid black;
+    border-spacing: 0px;
+    padding: 0px;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: auto;
+} /*tabela de especificações do googleGlass*/
+
+table#specs caption{
+    color: #808080;
+    font-size: 15pt;
+    text-align: left;
+    margin-top: -5px;
+    font-weight: bolder;
+} /*Legenda da tabela*/
+
+table#specs caption span{
+    display: block;
+    color: black;
+    float: right;
+    font-size: 9pt;
+    margin-top: 10px;
+} /*data da tabela*/
+
+table#specs td{
+    background: rgba(243,243,243,1);
+    border: 0px solid rgba(218,212,212,1);
+    border-spacing: -10px;
+    padding: 10px;
+} /*itens gerais da tabela*/
+
+table#specs td.ce{
+    color: white;
+    background: #606060;
+    text-shadow: 0px 5px 3px rgba(0,0,0,.9);
+    border-top: .5px dashed white;
+    border-bottom: .5px dashed white;
+    border-spacing: 0px;
+    text-align: right;
+    vertical-align: top;
+} /*itens da coluna da esquerda*/
+
+table#specs td.ce1{
+    color: white;
+    background: #606060;
+    text-shadow: 0px 5px 3px rgba(0,0,0,.9);
+    text-align: right;
+    border-top: .2px solid black;  
+     border-bottom: .5px dashed white;
+} /*primeiro item da coluna da esquerda - confg especial.*/
+
+table#specs td.ce2{
+    color: white;
+    background: #606060;
+    text-shadow: 0px 5px 3px rgba(0,0,0,.9);
+    text-align: right;
+    border-top: .5px dashed white;
+    border-bottom: .2px solid black;
+} /*ultimo item da coluna da esquerda - confg especial.*/
+
+table#specs td.cd{
+    background: rgba(218,212,212,1);
+    text-shadow: 1px 1px 1.5px #FFFFFF;
+    border-left: .5px solid #606060;
+    border-top: .2px solid black;
+    border-bottom: .2px solid black;
+    border-right: .5px solid #606060;
+} /*itens da coluna da direita*/
+
+section#corpo{
+    display: block;
+    width: 620px;
+    float: left;
+    border-right: 3px solid #606060;
+    border-spacing: 5px;
+    padding-right: 30px;
+} /*corpo principal - a esquerda da pagina*/
+
+article#noticia-principal h2{
+    font-size: 15pt;
+    color: #383838;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 20px 0px 20px 0px;
+    border: 1px dashed whitesmoke;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    color: #353535;
+    text-align: center;
+    font-size: 20pt;
+    margin-bottom: -30px;
+}
+
+header#cabecalho-artigo h2{
+    background: none;
+    text-align: left;
+    padding-left: 150px;
+    font-size: 10pt;
+}
+
+header#cabecalho-artigo h3{
+    
+}
+
+.direita{
+    text-align: right;
+    font-size: 9pt;
+    margin-bottom: -20px;
+} /*Edição especial para artigos a direita*/
+
+a{
+    color: #606060;
+    text-decoration: none;
+} /*Formatação de links*/
+
+a:hover{
+    text-decoration: underline;
+} /*Efeito sobre links*/
+
+aside#lateral{
+    display: block;
+    width: 580px;
+    float: right;
+    background: #dddddd;
+    margin: 3px 20px 0px;
+    box-shadow: 4px 4px 2px rgba(0,0,0,.2)
+} /*corpo lateral - a direita da pagina*/
+
+aside#lateral h1{
+    font-family: 'FonteLogo',sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    color: #353535;
+}
+
+aside#lateral h2{
+    color: #606060;
+    background: #ffffff;
+    margin: 10px 2px 10px 2px;
+    padding: 0px 10px 0px 10px;
+    border: 1px dashed #dddddd;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+footer#rodape{
+    clear: both;
+    border-top: 3px solid #606060;
+} /*rodapé ao fim da pagina*/
+
+footer#rodape p{
+    text-align: center;
+} /*paragrago especial do rodapé*/
+
+</style>
